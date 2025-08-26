@@ -15,6 +15,7 @@ if (!user) return <Navigate to="/login" />;
         <>
         <div className="main_container">
             <section className="section_pfp">
+              <span className='logo' onClick={() => navigate("/dashboard/")}>PHOTO</span>
               <p className="Introduction">Hello {user.username}</p>
                 <p className="profile" onClick={() => navigate("/dashboard/profile")}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="profile_icon">

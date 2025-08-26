@@ -47,7 +47,9 @@
 .settings_icon,.messages_icon,.profile_icon{
     width: 1.5rem;
 }
-
+.logo{
+    cursor: pointer;
+}
 
 
 
