@@ -7,8 +7,8 @@ import Profile from './Profile';
 import { Link } from "react-router-dom";
 function Dashboard({user}){
 if (!user) return <Navigate to="/login" />;
-const [message,setMessage] = useState("");
-const [refreshFeed, setRefreshFeed] = useState(0);
+   const [message,setMessage] = useState("");
+   const [refreshFeed, setRefreshFeed] = useState(0);
    const navigate = useNavigate();
 
     return(
@@ -34,11 +34,6 @@ const [refreshFeed, setRefreshFeed] = useState(0);
               <Outlet user = {user}
                       refreshFeed = {refreshFeed}/>
             </main>
-            <section className="section_search">
-              <p>
-              <input type='text' className='search_input' placeholder='ANDREJJJ'></input>
-              </p>
-            </section>
         </div>
         </>
     )
