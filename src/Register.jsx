@@ -15,6 +15,8 @@ function Register() {
     setMessage("");
     const data = await res.json();
     console.log(data);
+    setUsername("");
+    setPassword("");
   };
   
   return (
