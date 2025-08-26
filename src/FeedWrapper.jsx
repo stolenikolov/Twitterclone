@@ -17,21 +17,27 @@ function FeedWrapper({ user }) {
   };
 
   return (
-    <div>
+    <>
+    <div className='search_input_container'>
+    <div className='feed_input_container'>
       <div className="input_container">
         <textarea
           placeholder="What are you thinking?"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="input_text"
-        />
+          />
         <button className="input_button" onClick={handlePost}>
           Post
         </button>
       </div>
-
       <Feed user={user} refresh={refreshFeed} />
     </div>
+    <div className='search_container'>
+      <input type="text" />
+    </div>
+    </div>
+  </>
   );
 }
 export default FeedWrapper;

@@ -35,3 +35,13 @@
     cursor: pointer;
 
 }
+.feed_input_container{
+    width: 100%;
+}
+.search_input_container{
+    display: flex;
+    gap: 1rem;
+}
+.search_container{
+    width: 30%;
+}

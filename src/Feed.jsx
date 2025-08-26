@@ -25,7 +25,8 @@ function Feed({ refresh }) {
   };
 
   return (
-    <div>
+    <>
+    <div className='post_section'>
       {posts.map((post) => (
         <div key={post.id} className="post_container">
           <p className="post_username">{post.User.username} • {formatDate(post.createdAt)}</p>
@@ -39,6 +40,7 @@ function Feed({ refresh }) {
         </div>
       ))}
     </div>
+    </>
   );
 }
 
