@@ -38,8 +38,7 @@ if (!user) return <Navigate to="/login" />;
                 </svg>Notifications</p>
             </section>
             <main className="section_main">
-              <Outlet user = {user}
-                      refreshFeed = {refreshFeed}/>
+                <Outlet context={{ user, refreshFeed, setRefreshFeed }} />
             </main>
         </div>
         </>

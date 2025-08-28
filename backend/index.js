@@ -53,18 +53,38 @@ app.post('/dashboard',async(req,res)=>{
   }
 })
 
-app.get('/posts', async (req, res) => {
+// app.get('/posts', async (req, res) => {
+//   try {
+//     const posts = await Post.findAll({
+//       include: {
+//         model: User,
+//         attributes: ['username'], // only include username
+//       },             
+//       order: [['createdAt', 'DESC']],
+//     });
+//     res.json(posts);
+//   } catch (err) {
+//     res.status(500).json({ error: 'Something went wrong' });
+//   }
+// });
+app.get("/posts", async (req, res) => {
   try {
+    const { userId } = req.query;
+    let where = {};
+    if (userId) {
+      where.userId = userId; // lowercase 'userId' matches Post model
+    }
+
     const posts = await Post.findAll({
-      include: {
-        model: User,
-        attributes: ['username'], // only include username
-      },             
-      order: [['createdAt', 'DESC']],
+      where,
+      include: [User], // get the associated user
+      order: [["createdAt", "DESC"]],
     });
+
     res.json(posts);
   } catch (err) {
-    res.status(500).json({ error: 'Something went wrong' });
+    console.error(err); // log the real error
+    res.status(500).json({ error: "Something went wrong" });
   }
 });
 
