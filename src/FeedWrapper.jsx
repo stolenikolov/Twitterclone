@@ -34,7 +34,7 @@ function FeedWrapper({ user }) {
       <Feed user={user} refresh={refreshFeed} />
     </div>
     <div className='search_container'>
-      <input type="text" />
+      <input type="text" placeholder='Search' className='search_input'/>
     </div>
     </div>
   </>

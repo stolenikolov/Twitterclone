@@ -32,7 +32,7 @@
     font-size: 2rem;
     margin-top: 1rem;
 }
-.settings,.messages,.profile{
+.settings,.messages,.profile,.notifications{
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -41,10 +41,10 @@
     font-size: 1.5rem;
     margin: 5px;
 }
-.settings:hover,.messages:hover,.profile:hover{
+.settings:hover,.messages:hover,.profile:hover,.notifications:hover{
     background-color: rgb(250, 250, 250);;
 }
-.settings_icon,.messages_icon,.profile_icon{
+.settings_icon,.messages_icon,.profile_icon,.notifications_icon{
     width: 1.5rem;
 }
 .logo{
@@ -103,7 +103,7 @@
 }
 
 /* SEARCH */
-.section_search{
+.search_container{
     display: flex;
     align-items: center;
     flex-direction: column;
